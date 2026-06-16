@@ -1,0 +1,20 @@
+function [N, N_b, states_tot, n_uopt, n_inp, M, R1, R2, R3, F0A, R1_min, R1_max, R2_min, R2_max, R3_min, R3_max, F0A_min, F0A_max] = set_dimension()
+    N = 12; 
+    M = 12;
+    N_b =  1; 
+    n_uopt = N/N_b+M/N_b; 
+    states_tot = 18;
+    n_inp = 4;
+    R1 = 400;
+    R2 = 375;
+    R3 = 272;
+    F0A = 100;
+    R1_min = 398;
+    R1_max = 402;
+    R2_min = 373;
+    R2_max = 377;
+    R3_min = 270;
+    R3_max = 274;
+    F0A_min = 80;
+    F0A_max = 120;
+end
