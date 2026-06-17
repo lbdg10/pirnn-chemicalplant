@@ -1,0 +1,35 @@
+function xp=R1_stati(u,k1,VR1)
+%
+% simulatore reattore R1
+%
+z1a=u(1);
+z1b=u(2);
+z1c=u(3);
+z1d=u(4);
+%
+f0a=u(5);
+z0aa=u(6);
+z0ab=u(7);
+z0ac=u(8);
+z0ad=u(9);
+d1=u(10);
+xd1a=u(11);
+xd1b=u(12);
+xd1c=u(13);
+xd1d=u(14);
+d3=u(15);
+xd3a=u(16);
+xd3b=u(17);
+xd3c=u(18);
+xd3d=u(19);
+f0b=u(20);
+z0ba=u(21);
+z0bb=u(22);
+z0bc=u(23);
+z0bd=u(24);
+%
+f1=f0a+d1+d3+f0b;
+xp(1)=((z0aa*f0a+d1*xd1a+d3*xd3a+f0b*z0ba-f1*z1a)/VR1)-k1*z1a*z1b;
+xp(2)=((z0ab*f0a+d1*xd1b+d3*xd3b+f0b*z0bb-f1*z1b)/VR1)-k1*z1a*z1b;
+xp(3)=((z0ac*f0a+d1*xd1c+d3*xd3c+f0b*z0bc-f1*z1c)/VR1)+k1*z1a*z1b;
+xp(4)=((z0ad*f0a+d1*xd1d+d3*xd3d+f0b*z0bd-f1*z1d)/VR1)+k1*z1a*z1b;
